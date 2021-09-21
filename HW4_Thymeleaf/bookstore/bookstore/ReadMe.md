@@ -1,10 +1,3 @@
-# Delete bằng phương thức POST
-
-Ở bài trước, chúng ta xoá sách bằng phương thức GET. Sếp nhìn thấy là không ưng bụng đâu.
-http://localhost:8080/book/delete/id
-
-Bài này chuyển qua phương thức POST, có bảo mật hơn một chút. Sếp nào dễ tính cũng tạm cho qua. Sếp khó tính thì sẽ yêu cầu check quyền, rồi đưa ra cảnh báo trước khi xoá....
-
 ## Cấu trúc thư mục
 ```
 .
