@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.home-add{
+    margin: 20px;
+}
+
+.home-add button {
+    margin-right: 20px;
+    background-color: red;
+}
+
+.home-add button:hover {
+    opacity:.6 ;
+}
+
+.sub-home-add {
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    font-size: 17px;
+    text-decoration: none;
+    color: yellowgreen;
+}
+
+.sub-thead{
+    border: 1px solid #000;
+}
+
+.table-id{
+    padding: 0 25px;
+}
+
+.sub-body{
+    border: 1px solid #000;
+    text-align: center;
+    padding: 10px;
+}
+
+.listbook-title{
+    text-decoration: none;
+    color: #333;
+    width: 426px;
+    display: block;
+}
+
+.listbook-title:hover{
+    opacity: .6;
+}

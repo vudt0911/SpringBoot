@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Add book</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
 </head>
 <body>
-  <form action="#" th:action="@{/book/save}" th:object="${book}" method="post"
-          novalidate="novalidate">
-      <input type="hidden" placeholder="id" th:field="*{id}"/>
-      <input type="text" placeholder="title" th:field="*{title}"/><br><br>
-      <input type="text" placeholder="description" th:field="*{description}"/><br><br>
-      <button type="submit">Save</button>
-  </form>
+    <form action="#" th:action="@{/thyme/save}" th:object="${book}" method="POST"> 
+        <input type="hidden" placeholder="id" th:field="*{id}"/><br>
+        <input type="text" placeholder="title" required th:field="*{title}"/><br>
+        <input type="text" placeholder="description" required th:field="*{description}"/><br>
+        <!-- <button type="submit">Save</button> -->
+        <input type="submit" value="Save">
+    </form>
 </body>
 </html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/listbook.css}">
+    <title>Book Store</title>
+</head>
+<body>
+  <div class="home-add">
+   <button> <a href="/thyme" class="sub-home-add">Home</a> </button>
+   <button><a href="/thyme/add" class="sub-home-add">Add new Book</a></button> 
+  </div>
+    <table class="table">
+        <thead>
+            <th class="sub-thead table-id">Id</th>
+            <th class="sub-thead">Title</th>
+            <!-- <th>Description</th> -->
+        </thead>
+        <tbody>
+            <tr th:each="book, istart:${books}">
+                <td th:text="${istart.index}+1" class="sub-body"></td>
+                <!-- <td th:text="*{book.id}"></td> -->
+                <td><a th:href="@{/thyme/{id}(id=${book.id})}" class="sub-body listbook-title"><strong th:text="${book.title}"></strong></a></td>
+                <!-- <td th:text="*{book.description}"></td> -->
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
