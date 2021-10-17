@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${employee.firstName} + ${ employee.lastName}"></title>
+</head>
+<body>
+<form action="#" th:action="@{/employee/delete}" th:object="${employee}" method="post">
+    <input type="hidden" th:field="*{id}">
+    <h1 th:text="'Full Name: '+ ${employee.firstName} +' '+ ${employee.lastName}"></h1>
+    <p th:text="'Email: ' + ${employee.email}"></p>
+    <p th:text="'Passport Number: ' + ${employee.passportNumber}"></p>
+    <a th:href="@{/employee/edit/{id}(id=${employee.id})}">Edit Employee</a>
+    <!-- <a th:href="@{/employee/delete/{id}(id=${employee.id})}">Delete</a> -->
+    <button type="submit">Delete</button>
+</form>
+</body>
+</html>
